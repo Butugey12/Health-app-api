@@ -22,7 +22,7 @@ app.listen(port , async ()=> {
     try {
         await mongoose.connect(dbUri);
         log.info("DB Connected");
-      } 
+    } 
     catch (error) {
       log.error("Could not connect to db");
       process.exit(1);
