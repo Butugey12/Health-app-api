@@ -2,6 +2,7 @@ import config from 'config';
 import exp from 'constants';
 import express from 'express';
 import mongoose, { connect } from 'mongoose';
+import routes from './routes';
 import { log } from './utils';
 
 
@@ -27,6 +28,7 @@ app.listen(port , async ()=> {
       log.error("Could not connect to db");
       process.exit(1);
     }
+    routes(app);
 
 })
 
